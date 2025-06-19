@@ -226,9 +226,9 @@ class EDA:
                 sejong_df[col] = pd.to_numeric(sejong_df[col], errors='coerce').fillna(0)
 
             st.subheader("데이터프레임 구조 (info)")
-            buffer = []
+            buffer = io.StringIO()
             sejong_df.info(buf=buffer)
-            info_str = '\n'.join(buffer)
+            info_str = buffer.getvalue()
             st.text(info_str)
 
             st.subheader("데이터 요약 통계 (describe)")
