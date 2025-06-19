@@ -218,7 +218,7 @@ class EDA:
         with tabs[0]:
 
             # '세종' 지역 데이터만 필터링
-            sejong_df = df[df['행정구역'].str.contains('세종', na=False)].copy()
+            sejong_df = df[df['지역'].str.contains('세종', na=False)].copy()
 
             # 숫자열로 변환
             numeric_columns = ['인구', '출생아수(명)', '사망자수(명)']
